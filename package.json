@@ -1,0 +1,22 @@
+{
+  "name": "projmnt",
+  "version": "1.0.0",
+  "description": "A project management applicstion for beginners",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "keywords": [
+    "udemy",
+    "backend",
+    "course",
+    "API",
+    "creation"
+  ],
+  "author": "Nishant Khadka",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "3.9.10"
+  }
+}
