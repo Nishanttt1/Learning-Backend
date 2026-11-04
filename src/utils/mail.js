@@ -22,6 +22,23 @@ const sendEmail = async (options) => {
         pass: process.env.MAILTRAP_SMTP_PASS
     }
    })
+
+
+const mail = {
+    from: "mail.taskmanager@example.com",
+    to: options.email,
+    subject: options.subject,
+    text: emailTextual,
+    html: emailHtml
+}
+
+try {
+    await transporter.sendMail(mail)
+} catch (error) {
+    console.error("Email service failed silently. Make sure you have provided your MAILTRAP credentials in the .env file")
+    console.error("Error:, error")
+}
+
 }
 
 
@@ -64,5 +81,6 @@ const forgotPasswordMailGenContent = (username, passwordResetUrl) =>{
 
 export {
     emailVerificationMailGenContent,
-    forgotPasswordMailGenContent
+    forgotPasswordMailGenContent,
+    sendEmail,
 };
