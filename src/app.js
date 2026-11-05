@@ -24,8 +24,8 @@ import healthcheckRoutes from "./routes/healthcheck.routes.js";
 
 import authRoutes from "./routes/auth.routes.js";
 
-app.use("/api/v1/healthcheck", healthcheckRouter);
-app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/healthcheck", healthcheckRoutes);
+app.use("/api/v1/auth", authRoutes);
 
 
 app.get("/", (req, res) => {
